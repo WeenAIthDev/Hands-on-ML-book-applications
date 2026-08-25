@@ -7,6 +7,4 @@ jobs:
       steps:
         - name: Print a greeting
           shell: python
-          run: |
-               import os 
-               print(os.environ['PATH'])
+          run: print("Hello")
