@@ -10,5 +10,4 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Install kaggle
-          shell: python
           run: pip install kaggle
