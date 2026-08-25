@@ -1,1 +1,10 @@
-on: workflow_dispatch
+on: 
+  workflow_dispatch
+
+jobs:
+   dataset-fetch:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Print a greeting
+          shell: python
+          run: print("Hello")
