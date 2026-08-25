@@ -17,7 +17,7 @@ jobs:
             KAGGLE_API_TOKEN: ${{secrets.KAGGLE_API_TOKEN}}
 
         - name: upload-artifacts
-          uses: actions/upload-artifact@version
+          uses: actions/upload-artifact@v7
           with:
            name: california-housing-prices
            path: california-housing-prices.zip         
