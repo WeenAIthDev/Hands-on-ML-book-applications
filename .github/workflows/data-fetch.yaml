@@ -35,7 +35,11 @@ jobs:
 
         - name: Tracking creation of file
           run: git status --short  
-
+        
+        - name: inspect repository
+          run: |
+                 pwd
+                 ls -la
         - name: Add file 
           run: git add data/california-housing-prices    
                
