@@ -8,6 +8,8 @@ on:
 jobs:
    dataset-fetch:
       runs-on: ubuntu-latest
+      permissions:
+        contents: write
       steps:
         - name: Install kaggle
           run: |
@@ -49,7 +51,8 @@ jobs:
         - name: Commit file 
           run: | 
                git add data
-               git commit -m "Retrieve/Update the california dataset"    
+               git commit -m "Retrieve/Update the california dataset"
+               git push     
                
         - name: Tracking creation of file
           run: git status --short  
