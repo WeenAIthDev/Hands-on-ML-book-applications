@@ -59,11 +59,5 @@ jobs:
                else:
                  echo "Dataset changed"
                  git commit -m "Dataset update/adding"
-                 git push
                fi
-              
-        - name: co     
-
-               
-        - name: Tracking creation of file
-          run: git status --short  
+          run: git push 
