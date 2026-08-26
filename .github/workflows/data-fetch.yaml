@@ -29,7 +29,10 @@ jobs:
 
         - name: Inspecting files
           run: ls -R data/california-housing-prices      
-
+        
+        - name: Checkout
+          run: actions/checkout@v5
+          
         - name: Tracking creation of file
           run: git status --short    
 
