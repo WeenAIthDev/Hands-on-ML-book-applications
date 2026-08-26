@@ -20,4 +20,13 @@ jobs:
           uses: actions/upload-artifact@v7
           with:
            name: california-housing-prices
-           path: california-housing-prices.zip         
+           path: california-housing-prices.zip     
+
+        - name: unzip file
+          run: |
+               mkdir data/california-housing-prices
+               unzip california-housing-prices.zip -d data/california-housing-prices
+               
+        - name: Inspecting files
+          run: ls -R data/california-housing-prices        
+
