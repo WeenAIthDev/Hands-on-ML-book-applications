@@ -32,35 +32,12 @@ jobs:
           run: |
                mkdir -p data/california-housing-prices
                unzip -o california-housing-prices.zip -d data/california-housing-prices
-
-        - name: Inspecting files
-          run: ls -R data/california-housing-prices      
-
-        - name: Tracking creation of file
-          run: git status --short  
         
-        - name: inspect repository
-          run: |
-                 pwd
-                 ls -la
-                 find . -maxdepth 3 -type f
         - name: configure git 
           run: |
                git config user.name "WeenAIthDev"
                git config user.email "273494684+WeenAIthDev@users.noreply.github.com"
 
-        - name: Check dataset files
-          run: |
-                echo "Dataset files:"
-                find data -type f -print
-
-                echo "Git status:"
-                git status --short
-
-                echo "Git tracked files:"
-                git ls-files data       
-
-    
         - name: check for changes
           run: | 
                git add data
