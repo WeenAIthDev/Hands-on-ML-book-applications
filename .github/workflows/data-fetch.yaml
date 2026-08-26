@@ -42,7 +42,7 @@ jobs:
                  ls -la
                  find . -maxdepth 3 -type f
         - name: Add file 
-          run: git add data/california-housing-prices    
+          run: git add data    
                
         - name: Tracking creation of file
           run: git status --short  
