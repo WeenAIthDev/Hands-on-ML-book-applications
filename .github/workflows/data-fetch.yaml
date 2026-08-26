@@ -60,18 +60,17 @@ jobs:
                 echo "Git tracked files:"
                 git ls-files data       
 
-        - name: Commit file 
-          run: | 
-               git add data
-
+    
         - name: check for changes
           run: | 
+               git add data
+               
                if git diff --cached --quiet ; then
                  echo "No dataset changed"
 
                else:
                  echo "Dataset changed"
                  git commit -m "Dataset update/adding"
+                 git push 
                fi
-        - name: pushing into github repo       
-          run: git push 
+
