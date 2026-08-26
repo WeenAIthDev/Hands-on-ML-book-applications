@@ -67,6 +67,7 @@ jobs:
 
                if git diff --cached --quiet ; then
                  echo "No dataset changed"
+                 git push origin main
 
                else:
                  echo "Dataset changed"
