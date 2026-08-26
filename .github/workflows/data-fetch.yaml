@@ -40,6 +40,7 @@ jobs:
           run: |
                  pwd
                  ls -la
+                 find . -maxdepth 3 -type f
         - name: Add file 
           run: git add data/california-housing-prices    
                
