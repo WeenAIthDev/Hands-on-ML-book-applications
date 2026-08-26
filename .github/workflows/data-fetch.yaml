@@ -51,8 +51,19 @@ jobs:
         - name: Commit file 
           run: | 
                git add data
-               git commit -m "Retrieve/Update the california dataset"
-               git push     
+
+        - name: check for changes
+          run: | 
+               if git diff --cached --quiet ; then
+                 echo "No dataset changed"
+               else:
+                 echo "Dataset changed"
+                 git commit -m "Dataset update/adding"
+                 git push
+               fi
+              
+        - name: co     
+
                
         - name: Tracking creation of file
           run: git status --short  
