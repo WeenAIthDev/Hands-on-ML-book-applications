@@ -41,8 +41,15 @@ jobs:
                  pwd
                  ls -la
                  find . -maxdepth 3 -type f
-        - name: Add file 
-          run: git add data    
+        - name: configure git 
+          run: |
+               git config user.name "WeenAIthDev"
+               git config user.email "273494684+WeenAIthDev@users.noreply.github.com"
+
+        - name: Commit file 
+          run: | 
+               git add data
+               git commit -m "Retrieve/Update the california dataset"    
                
         - name: Tracking creation of file
           run: git status --short  
