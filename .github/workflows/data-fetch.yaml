@@ -49,6 +49,17 @@ jobs:
                git config user.name "WeenAIthDev"
                git config user.email "273494684+WeenAIthDev@users.noreply.github.com"
 
+        - name: Check dataset files
+          run: |
+                echo "Dataset files:"
+                find data -type f -print
+
+                echo "Git status:"
+                git status --short
+
+                echo "Git tracked files:"
+                git ls-files data       
+
         - name: Commit file 
           run: | 
                git add data
