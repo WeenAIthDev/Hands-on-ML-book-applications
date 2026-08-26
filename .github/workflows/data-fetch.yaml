@@ -60,4 +60,5 @@ jobs:
                  echo "Dataset changed"
                  git commit -m "Dataset update/adding"
                fi
+        - name: pushing into github repo       
           run: git push 
