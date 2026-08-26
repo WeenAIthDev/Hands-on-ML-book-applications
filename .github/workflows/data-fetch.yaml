@@ -11,7 +11,7 @@ jobs:
       permissions:
         contents: write
       steps:
-      
+
         - name: Checkout
           uses: actions/checkout@v5
 
@@ -31,7 +31,7 @@ jobs:
         - name: unzip file
           run: |
                mkdir -p data/california-housing-prices
-               unzip california-housing-prices.zip -d data/california-housing-prices
+               unzip -o california-housing-prices.zip -d data/california-housing-prices
 
         - name: Inspecting files
           run: ls -R data/california-housing-prices      
