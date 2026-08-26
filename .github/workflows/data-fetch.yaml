@@ -24,9 +24,9 @@ jobs:
 
         - name: unzip file
           run: |
-               mkdir data/california-housing-prices
+               mkdir -p data/california-housing-prices
                unzip california-housing-prices.zip -d data/california-housing-prices
-               
+
         - name: Inspecting files
           run: ls -R data/california-housing-prices        
 
